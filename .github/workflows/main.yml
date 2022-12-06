@@ -1,10 +1,11 @@
-/**
-     * Блок тестов по добавлению в избранное со страниц каталога:<p>
-     * Основной каталог
-     */
-    @Test()
-    @Description("Блок тестов по добавлению в избранное со страниц каталога: Основной каталог")
-    public void addToWishlistFromCatalog() {
-        driver.get(getUrl + "catalog/");
-        addItemToFavoritesAndCheckNames();
-    }
+name: test wish list
+public class WishListTest extends TestBase {
+
+    @BeforeEach
+    public void setUp() {
+        mainSetUp();
+        wishlist = new Wishlist(driver);
+        filters = new Filters(driver);
+        size = new Size(driver);
+        collection = new Collection(driver);
+        basket = new Basket(driver);
