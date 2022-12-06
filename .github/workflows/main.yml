@@ -1,0 +1,10 @@
+/**
+     * Блок тестов по добавлению в избранное со страниц каталога:<p>
+     * Основной каталог
+     */
+    @Test()
+    @Description("Блок тестов по добавлению в избранное со страниц каталога: Основной каталог")
+    public void addToWishlistFromCatalog() {
+        driver.get(getUrl + "catalog/");
+        addItemToFavoritesAndCheckNames();
+    }
